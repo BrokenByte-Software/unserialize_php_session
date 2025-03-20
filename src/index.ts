@@ -163,7 +163,7 @@ function read(array: CustomArray) {
   return result;
 }
 
-export default function unserializer(text: string) {
+export default function unserializer<T>(text: string) {
   const result = {};
   const array = new CustomArray();
   array.push(...Array.from(text));
@@ -180,5 +180,5 @@ export default function unserializer(text: string) {
       throw err;
     }
   } while (array.length);
-  return result;
+  return result as T;
 }

@@ -1,0 +1,65 @@
+{
+  "name": "@brokenbyte-software/unserialize_php_session",
+  "version": "0.0.1",
+  "description": "A PHP session parser",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "files": [
+    "build/src",
+    "!build/src/try*",
+    "!build/src/test*"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "php",
+    "session",
+    "parse",
+    "unserialize"
+  ],
+  "author": {
+    "name": "Pavel Lyubin",
+    "email": "re1ax_88@mail.ru",
+    "url": "https://github.com/pafik13"
+  },
+  "contributors": [
+    {
+      "name": "Pavel Lyubin",
+      "email": "re1ax_88@mail.ru",
+      "url": "https://github.com/pafik13"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrokenByte-Software/unserialize_php_session.git"
+  },
+  "homepage": "https://github.com/BrokenByte-Software/unserialize_php_session#readme",
+  "ava": {
+    "typescript": {
+      "rewritePaths": {
+        "src/": "build/src/"
+      },
+      "compile": false
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@10.2.3",
+  "scripts": {
+    "test": "ava",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
+  },
+  "devDependencies": {
+    "@ava/typescript": "^4.1.0",
+    "@types/node": "^18.19.80",
+    "ava": "^6.2.0",
+    "gts": "^5.3.1",
+    "typescript": "~5.2.0"
+  }
+}
